@@ -8,11 +8,12 @@
 
 import Alamofire
 import SwiftyJSON
+import Moya
 
 struct MarvelAPIClient: CharactersAPIClient {
-    fileprivate let provider: CharactersAPIProvider
+    fileprivate let provider: MoyaProvider<MarvelServiceAPI>
     
-    init(provider: CharactersAPIProvider = MarvelCharactersAPIProvider()) {
+    init(provider: MoyaProvider<MarvelServiceAPI> = MoyaProvider<MarvelServiceAPI>()) {
         self.provider = provider
     }
     

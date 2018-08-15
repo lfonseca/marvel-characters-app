@@ -25,7 +25,6 @@ class MarvelServiceAPITest: QuickSpec {
                     expect(endpoint.path).to(equal("/v1/public/characters"))
                     expect(endpoint.method).to(equal(.get))
                     expect(endpoint.headers?.values).to(contain("application/json"))
-                    expect(endpoint.sampleData).to(equal("Sample".data(using: .utf8)!))
                 }
             }
         }
