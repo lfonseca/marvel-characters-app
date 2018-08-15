@@ -5,27 +5,35 @@ PODS:
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Nimble (7.1.1)
+  - Quick (1.2.0)
   - Result (3.2.4)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Moya (~> 11.0)
+  - Nimble
+  - Quick
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Moya
+    - Nimble
+    - Quick
     - Result
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: aa3822cffc02e657fd84e3fe686a660c00eb13a0
+PODFILE CHECKSUM: d06537f403b0a407c5812be5dd0d894ec698af85
 
 COCOAPODS: 1.5.2

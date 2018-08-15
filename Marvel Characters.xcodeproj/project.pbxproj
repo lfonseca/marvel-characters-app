@@ -15,12 +15,12 @@
 		DB75FD692124988800AD7B24 /* MarvelAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */; };
 		DBC0EE1A2124AC2E0006AFC7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE192124AC2E0006AFC7 /* Character.swift */; };
 		DBC0EE1D2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE1C2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift */; };
+		DBC0EE222124C67D0006AFC7 /* MarvelServiceAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */; };
 		DBD9A37F2123A6FE00791154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A37E2123A6FE00791154 /* AppDelegate.swift */; };
 		DBD9A3812123A6FE00791154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A3802123A6FE00791154 /* ViewController.swift */; };
 		DBD9A3842123A6FE00791154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD9A3822123A6FE00791154 /* Main.storyboard */; };
 		DBD9A3862123A6FF00791154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD9A3852123A6FF00791154 /* Assets.xcassets */; };
 		DBD9A3892123A6FF00791154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD9A3872123A6FF00791154 /* LaunchScreen.storyboard */; };
-		DBD9A3942123A70000791154 /* Marvel_CharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A3932123A70000791154 /* Marvel_CharactersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,8 @@
 		DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIParams.swift; sourceTree = "<group>"; };
 		DBC0EE192124AC2E0006AFC7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		DBC0EE1C2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersAPIProvider.swift; sourceTree = "<group>"; };
+		DBC0EE202124C67D0006AFC7 /* Marvel CharactersTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvel CharactersTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceAPITest.swift; sourceTree = "<group>"; };
 		DBD9A37B2123A6FE00791154 /* Marvel Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD9A37E2123A6FE00791154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD9A3802123A6FE00791154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 		DBD9A3882123A6FF00791154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBD9A38A2123A6FF00791154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBD9A38F2123A70000791154 /* Marvel CharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel CharactersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBD9A3932123A70000791154 /* Marvel_CharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_CharactersTests.swift; sourceTree = "<group>"; };
 		DBD9A3952123A70000791154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +115,15 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		DBC0EE1F2124C6040006AFC7 /* ServiceAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */,
+				DBC0EE202124C67D0006AFC7 /* Marvel CharactersTests-Bridging-Header.h */,
+			);
+			path = ServiceAPI;
+			sourceTree = "<group>";
+		};
 		DBD9A3722123A6FE00791154 = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +163,7 @@
 		DBD9A3922123A70000791154 /* Marvel CharactersTests */ = {
 			isa = PBXGroup;
 			children = (
-				DBD9A3932123A70000791154 /* Marvel_CharactersTests.swift */,
+				DBC0EE1F2124C6040006AFC7 /* ServiceAPI */,
 				DBD9A3952123A70000791154 /* Info.plist */,
 			);
 			path = "Marvel CharactersTests";
@@ -200,6 +210,7 @@
 				DBD9A38B2123A70000791154 /* Sources */,
 				DBD9A38C2123A70000791154 /* Frameworks */,
 				DBD9A38D2123A70000791154 /* Resources */,
+				C290AF5B07FB32841400AE30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +237,7 @@
 					};
 					DBD9A38E2123A70000791154 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = DBD9A37A2123A6FE00791154;
 					};
 				};
@@ -312,6 +324,26 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C290AF5B07FB32841400AE30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Marvel CharactersTests/Pods-Marvel CharactersTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marvel CharactersTests/Pods-Marvel CharactersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D6F4B97736940542DE4D69B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,7 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBD9A3942123A70000791154 /* Marvel_CharactersTests.swift in Sources */,
+				DBC0EE222124C67D0006AFC7 /* MarvelServiceAPITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,8 +572,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8ECF3970A072BC45788F0D2C /* Pods-Marvel CharactersTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel CharactersTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -551,6 +583,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-fonseca.Marvel-CharactersTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Marvel CharactersTests/ServiceAPI/Marvel CharactersTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marvel Characters.app/Marvel Characters";
@@ -561,8 +595,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D05D506EA87BEE0F193C9054 /* Pods-Marvel CharactersTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel CharactersTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -572,6 +606,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-fonseca.Marvel-CharactersTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Marvel CharactersTests/ServiceAPI/Marvel CharactersTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marvel Characters.app/Marvel Characters";

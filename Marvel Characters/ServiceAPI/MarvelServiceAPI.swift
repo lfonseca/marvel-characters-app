@@ -16,10 +16,7 @@ extension MarvelServiceAPI: TargetType {
     
     var baseURL: URL { return URL(string: "https://gateway.marvel.com")! }
     var path: String {
-        switch self {
-        case .characters:
-            return "/v1/public/characters"
-        }
+        return "/v1/public/characters"
     }
     var method: Method {
         return .get
