@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.7904761904761904" branch-rate="1.0000000000000000" lines-covered="83" lines-valid="105" branches-covered="0" branches-valid="0" complexity="0.0" timestamp="1534379434" version="Slather 2.4.6">
+  <sources>
+    <source>/Users/lucasfonseca/Documents/Projetos/Pessoal/marvel-characters-app</source>
+  </sources>
+  <packages>
+    <package name="Marvel Characters" line-rate="0.3793103448275862" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="AppDelegate" filename="Marvel Characters/AppDelegate.swift" line-rate="0.3333333333333333" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="17" branch="false" hits="1"/>
+            <line number="18" branch="false" hits="1"/>
+            <line number="19" branch="false" hits="1"/>
+            <line number="20" branch="false" hits="1"/>
+            <line number="22" branch="false" hits="0"/>
+            <line number="23" branch="false" hits="0"/>
+            <line number="24" branch="false" hits="0"/>
+            <line number="25" branch="false" hits="0"/>
+            <line number="27" branch="false" hits="0"/>
+            <line number="28" branch="false" hits="0"/>
+            <line number="29" branch="false" hits="0"/>
+            <line number="30" branch="false" hits="0"/>
+            <line number="32" branch="false" hits="0"/>
+            <line number="33" branch="false" hits="0"/>
+            <line number="34" branch="false" hits="0"/>
+            <line number="36" branch="false" hits="1"/>
+            <line number="37" branch="false" hits="1"/>
+            <line number="38" branch="false" hits="1"/>
+            <line number="40" branch="false" hits="0"/>
+            <line number="41" branch="false" hits="0"/>
+            <line number="42" branch="false" hits="0"/>
+          </lines>
+        </class>
+        <class name="ViewController" filename="Marvel Characters/ViewController.swift" line-rate="0.5000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="13" branch="false" hits="1"/>
+            <line number="14" branch="false" hits="1"/>
+            <line number="15" branch="false" hits="1"/>
+            <line number="16" branch="false" hits="1"/>
+            <line number="18" branch="false" hits="0"/>
+            <line number="19" branch="false" hits="0"/>
+            <line number="20" branch="false" hits="0"/>
+            <line number="21" branch="false" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Marvel Characters.DataModels" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="Character" filename="Marvel Characters/DataModels/Character.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="33" branch="false" hits="2"/>
+            <line number="34" branch="false" hits="2"/>
+            <line number="35" branch="false" hits="2"/>
+            <line number="36" branch="false" hits="2"/>
+            <line number="37" branch="false" hits="2"/>
+            <line number="38" branch="false" hits="2"/>
+            <line number="39" branch="false" hits="2"/>
+            <line number="40" branch="false" hits="2"/>
+            <line number="41" branch="false" hits="2"/>
+            <line number="42" branch="false" hits="2"/>
+            <line number="43" branch="false" hits="2"/>
+            <line number="44" branch="false" hits="2"/>
+            <line number="45" branch="false" hits="2"/>
+            <line number="46" branch="false" hits="2"/>
+            <line number="47" branch="false" hits="2"/>
+            <line number="52" branch="false" hits="6"/>
+            <line number="53" branch="false" hits="6"/>
+            <line number="54" branch="false" hits="36"/>
+            <line number="55" branch="false" hits="36"/>
+            <line number="56" branch="false" hits="36"/>
+            <line number="57" branch="false" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Marvel Characters.ServiceAPI" line-rate="0.9272727272727272" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="MarvelAPIClient" filename="Marvel Characters/ServiceAPI/MarvelAPIClient.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="16" branch="false" hits="2"/>
+            <line number="17" branch="false" hits="2"/>
+            <line number="18" branch="false" hits="2"/>
+            <line number="20" branch="false" hits="2"/>
+            <line number="21" branch="false" hits="2"/>
+            <line number="22" branch="false" hits="2"/>
+            <line number="23" branch="false" hits="2"/>
+            <line number="24" branch="false" hits="1"/>
+            <line number="25" branch="false" hits="1"/>
+            <line number="26" branch="false" hits="2"/>
+            <line number="27" branch="false" hits="2"/>
+            <line number="28" branch="false" hits="2"/>
+            <line number="29" branch="false" hits="1"/>
+            <line number="30" branch="false" hits="2"/>
+            <line number="31" branch="false" hits="1"/>
+            <line number="32" branch="false" hits="2"/>
+            <line number="33" branch="false" hits="2"/>
+            <line number="34" branch="false" hits="2"/>
+          </lines>
+        </class>
+        <class name="MarvelAPIParams" filename="Marvel Characters/ServiceAPI/MarvelAPIParams.swift" line-rate="0.8750000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="13" branch="false" hits="6"/>
+            <line number="14" branch="false" hits="6"/>
+            <line number="15" branch="false" hits="6"/>
+            <line number="16" branch="false" hits="6"/>
+            <line number="17" branch="false" hits="0"/>
+            <line number="18" branch="false" hits="6"/>
+            <line number="19" branch="false" hits="6"/>
+            <line number="20" branch="false" hits="6"/>
+          </lines>
+        </class>
+        <class name="MarvelServiceAPI" filename="Marvel Characters/ServiceAPI/MarvelServiceAPI.swift" line-rate="0.8965517241379310" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="17" branch="false" hits="3"/>
+            <line number="18" branch="false" hits="5"/>
+            <line number="19" branch="false" hits="5"/>
+            <line number="20" branch="false" hits="5"/>
+            <line number="21" branch="false" hits="3"/>
+            <line number="22" branch="false" hits="3"/>
+            <line number="23" branch="false" hits="3"/>
+            <line number="24" branch="false" hits="2"/>
+            <line number="25" branch="false" hits="2"/>
+            <line number="26" branch="false" hits="2"/>
+            <line number="27" branch="false" hits="2"/>
+            <line number="28" branch="false" hits="2"/>
+            <line number="29" branch="false" hits="2"/>
+            <line number="30" branch="false" hits="2"/>
+            <line number="31" branch="false" hits="2"/>
+            <line number="32" branch="false" hits="3"/>
+            <line number="33" branch="false" hits="3"/>
+            <line number="34" branch="false" hits="3"/>
+            <line number="35" branch="false" hits="1"/>
+            <line number="36" branch="false" hits="1"/>
+            <line number="37" branch="false" hits="1"/>
+            <line number="39" branch="false" hits="1"/>
+            <line number="40" branch="false" hits="1"/>
+            <line number="41" branch="false" hits="1"/>
+            <line number="42" branch="false" hits="1"/>
+            <line number="43" branch="false" hits="1"/>
+            <line number="44" branch="false" hits="0"/>
+            <line number="45" branch="false" hits="0"/>
+            <line number="46" branch="false" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

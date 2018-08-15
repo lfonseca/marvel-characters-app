@@ -33,7 +33,17 @@ extension MarvelServiceAPI: TargetType {
         return ["Content-type": "application/json"]
     }
     var sampleData: Data {
-        return "Sample".data(using: .utf8)!
+        return sampleData(from: "characters")
+    }
+    
+    fileprivate func sampleData(from filename: String) -> Data {
+        guard let path = Bundle.main.path(forResource: filename, ofType: "json") else { return Data() }
+        do {
+            return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+        } catch {
+            return Data()
+        }
     }
     
 }
+
