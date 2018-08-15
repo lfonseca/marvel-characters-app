@@ -7,33 +7,25 @@
 //
 
 import Alamofire
-import Moya
+import SwiftyJSON
 
 struct MarvelAPIClient: CharactersAPIClient {
+    fileprivate let provider: CharactersAPIProvider
     
-    static let instance = MarvelAPIClient()
-    fileprivate let provider = MoyaProvider<MarvelServiceAPI>()
+    init(provider: CharactersAPIProvider = MarvelCharactersAPIProvider()) {
+        self.provider = provider
+    }
     
-    private init() {}
-    
-    func getAllCharacters(on completion: @escaping (Result<Any>) -> Void) {
+    func getAllCharacters(on completion: @escaping (Result<[Character]>) -> Void) {
         provider.request(.characters) { result in
             switch result {
             case .success(let response):
-                let json = try! JSONSerialization.jsonObject(with: response.data, options: []) as? [String : Any]
-                completion(.success(json))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
-    }
-    
-    func getCharacter(by id: String, on completion: @escaping (Result<Any>) -> Void) {
-        provider.request(.character(id: id)) { result in
-            switch result {
-            case .success(let response):
-                let json = try! JSONSerialization.jsonObject(with: response.data, options: []) as? [String : Any]
-                completion(.success(json))
+                let json = JSON(response.data)
+                let responseResults = json["data"]["results"]
+                let characters = responseResults.map { characterJSON -> Character in
+                    return MarvelCharacter(from: characterJSON.1)
+                }
+                completion(.success(characters))
             case .failure(let error):
                 completion(.failure(error))
             }

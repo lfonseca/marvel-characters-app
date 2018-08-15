@@ -13,6 +13,8 @@
 		DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */; };
 		DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */; };
 		DB75FD692124988800AD7B24 /* MarvelAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */; };
+		DBC0EE1A2124AC2E0006AFC7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE192124AC2E0006AFC7 /* Character.swift */; };
+		DBC0EE1D2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE1C2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift */; };
 		DBD9A37F2123A6FE00791154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A37E2123A6FE00791154 /* AppDelegate.swift */; };
 		DBD9A3812123A6FE00791154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A3802123A6FE00791154 /* ViewController.swift */; };
 		DBD9A3842123A6FE00791154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD9A3822123A6FE00791154 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPIClient.swift; sourceTree = "<group>"; };
 		DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClient.swift; sourceTree = "<group>"; };
 		DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIParams.swift; sourceTree = "<group>"; };
+		DBC0EE192124AC2E0006AFC7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		DBC0EE1C2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersAPIProvider.swift; sourceTree = "<group>"; };
 		DBD9A37B2123A6FE00791154 /* Marvel Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD9A37E2123A6FE00791154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD9A3802123A6FE00791154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,22 @@
 			path = ServiceAPI;
 			sourceTree = "<group>";
 		};
+		DBC0EE1B2124BA900006AFC7 /* 3rdPartyAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				DBC0EE1C2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift */,
+			);
+			path = 3rdPartyAdapters;
+			sourceTree = "<group>";
+		};
+		DBC0EE1E2124C3670006AFC7 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				DBC0EE192124AC2E0006AFC7 /* Character.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
 		DBD9A3722123A6FE00791154 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +137,8 @@
 		DBD9A37D2123A6FE00791154 /* Marvel Characters */ = {
 			isa = PBXGroup;
 			children = (
+				DBC0EE1E2124C3670006AFC7 /* DataModels */,
+				DBC0EE1B2124BA900006AFC7 /* 3rdPartyAdapters */,
 				DB75FD612124651B00AD7B24 /* ServiceAPI */,
 				DBD9A37E2123A6FE00791154 /* AppDelegate.swift */,
 				DBD9A3802123A6FE00791154 /* ViewController.swift */,
@@ -276,12 +298,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -313,8 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC0EE1D2124BB120006AFC7 /* MarvelCharactersAPIProvider.swift in Sources */,
 				DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */,
 				DB75FD632124657800AD7B24 /* MarvelServiceAPI.swift in Sources */,
+				DBC0EE1A2124AC2E0006AFC7 /* Character.swift in Sources */,
 				DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */,
 				DBD9A3812123A6FE00791154 /* ViewController.swift in Sources */,
 				DBD9A37F2123A6FE00791154 /* AppDelegate.swift in Sources */,

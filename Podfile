@@ -6,6 +6,7 @@ target 'Marvel Characters' do
 
   pod 'Alamofire', '~> 4.7'
   pod 'Moya', '~> 11.0'
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'Marvel CharactersTests' do
     inherit! :search_paths

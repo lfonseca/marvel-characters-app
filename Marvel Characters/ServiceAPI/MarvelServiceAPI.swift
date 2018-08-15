@@ -10,7 +10,6 @@ import Moya
 
 enum MarvelServiceAPI {
     case characters
-    case character(id: String)
 }
 
 extension MarvelServiceAPI: TargetType {
@@ -20,8 +19,6 @@ extension MarvelServiceAPI: TargetType {
         switch self {
         case .characters:
             return "/v1/public/characters"
-        case .character(let id):
-            return "/v1/public/characters/\(id)"
         }
     }
     var method: Method {
