@@ -28,7 +28,12 @@ extension MarvelServiceAPI: TargetType {
         return .get
     }
     var task: Task {
-        return .requestPlain
+        let parameters = [
+            "apikey": MarvelAPIParam.value(for: APIKey.self),
+            "ts": MarvelAPIParam.value(for: Timestamp.self),
+            "hash": MarvelAPIParam.value(for: Hash.self)
+        ]
+        return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
     }
     var headers: [String : String]? {
         return ["Content-type": "application/json"]

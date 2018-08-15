@@ -10,6 +10,9 @@
 		3A04F1930F48E41DEAA9E3DE /* Pods_Marvel_Characters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8501DCCA0CE363BAE4C70C80 /* Pods_Marvel_Characters.framework */; };
 		43758723ABCE1A23BB7C6B15 /* Pods_Marvel_CharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC8BCE9CEB7921D03F3A3C6 /* Pods_Marvel_CharactersTests.framework */; };
 		DB75FD632124657800AD7B24 /* MarvelServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */; };
+		DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */; };
+		DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */; };
+		DB75FD692124988800AD7B24 /* MarvelAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */; };
 		DBD9A37F2123A6FE00791154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A37E2123A6FE00791154 /* AppDelegate.swift */; };
 		DBD9A3812123A6FE00791154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A3802123A6FE00791154 /* ViewController.swift */; };
 		DBD9A3842123A6FE00791154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD9A3822123A6FE00791154 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 		B7B9DD4516D4655593233C33 /* Pods-Marvel Characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters.release.xcconfig"; sourceTree = "<group>"; };
 		D05D506EA87BEE0F193C9054 /* Pods-Marvel CharactersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel CharactersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel CharactersTests/Pods-Marvel CharactersTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceAPI.swift; sourceTree = "<group>"; };
+		DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPIClient.swift; sourceTree = "<group>"; };
+		DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClient.swift; sourceTree = "<group>"; };
+		DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIParams.swift; sourceTree = "<group>"; };
 		DBD9A37B2123A6FE00791154 /* Marvel Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD9A37E2123A6FE00791154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD9A3802123A6FE00791154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +86,10 @@
 		DB75FD612124651B00AD7B24 /* ServiceAPI */ = {
 			isa = PBXGroup;
 			children = (
+				DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */,
 				DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */,
+				DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */,
+				DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */,
 			);
 			path = ServiceAPI;
 			sourceTree = "<group>";
@@ -304,9 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */,
 				DB75FD632124657800AD7B24 /* MarvelServiceAPI.swift in Sources */,
+				DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */,
 				DBD9A3812123A6FE00791154 /* ViewController.swift in Sources */,
 				DBD9A37F2123A6FE00791154 /* AppDelegate.swift in Sources */,
+				DB75FD692124988800AD7B24 /* MarvelAPIParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
