@@ -10,8 +10,9 @@ import Foundation
 
 struct MarvelAPIParam {
     
-    static func value<T: MarvelAPIParamValue>(for marvelAPIParamValueClass: T.Type) -> String {
-        guard let bundleInfoDictionary = Bundle.main.infoDictionary,
+    static func value<T: MarvelAPIParamValue>(for marvelAPIParamValueClass: T.Type,
+                                              in bundleInfoDictionary: [String: Any]? = Bundle.main.infoDictionary) -> String {
+        guard let bundleInfoDictionary = bundleInfoDictionary,
             let apiParamsDictionary = bundleInfoDictionary["MarvelAPIParams"] as? [String: AnyObject],
             let apiParamValue = apiParamsDictionary[marvelAPIParamValueClass.key] as? String else {
                 return ""
