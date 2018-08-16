@@ -9,7 +9,6 @@
 import Quick
 import Nimble
 import Alamofire
-import Moya
 
 @testable import Marvel_Characters
 
@@ -19,7 +18,7 @@ class MarvelAPIClientTest: QuickSpec {
         describe("Marvel API client") {
             describe("fetch characters") {
                 it("succeeds") {
-                    let apiClient = self.successStubAPIClient()
+                    let apiClient = MockMarvelAPIClient.forSuccess()
                     apiClient.getAllCharacters { result in
                         if case .success(let characters) = result {
                             expect(characters[0].name).to(equal("3-D Man"))
@@ -28,7 +27,7 @@ class MarvelAPIClientTest: QuickSpec {
                 }
                 it("fails") {
                     let expectedError = NSError(domain: "Tests", code: 500, userInfo: nil)
-                    let apiClient = self.failureStubAPIClient(with: expectedError)
+                    let apiClient = MockMarvelAPIClient.forFailure(with: expectedError)
                     apiClient.getAllCharacters { result in
                         if case .failure(let error) = result {
                             expect(error.localizedDescription).to(equal(expectedError.localizedDescription))
@@ -37,23 +36,6 @@ class MarvelAPIClientTest: QuickSpec {
                 }
             }
         }
-    }
-
-    fileprivate func successStubAPIClient() -> MarvelAPIClient {
-        let provider = MoyaProvider<MarvelServiceAPI>(stubClosure: MoyaProvider.immediatelyStub)
-        return MarvelAPIClient(provider: provider)
-    }
-
-    fileprivate func failureStubAPIClient(with expectedError: NSError) -> MarvelAPIClient {
-        let serverErrorClosure = { (target: MarvelServiceAPI) -> Endpoint in
-            return Endpoint(url: URL(target: target).absoluteString,
-                            sampleResponseClosure: { .networkError(expectedError) },
-                            method: target.method,
-                            task: target.task,
-                            httpHeaderFields: target.headers)
-        }
-        let provider = MoyaProvider<MarvelServiceAPI>(endpointClosure: serverErrorClosure, stubClosure: MoyaProvider.immediatelyStub)
-        return MarvelAPIClient(provider: provider)
     }
 
 }

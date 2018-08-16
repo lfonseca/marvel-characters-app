@@ -17,6 +17,7 @@
 		DBC0EE222124C67D0006AFC7 /* MarvelServiceAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */; };
 		DBC0EE242124D3B40006AFC7 /* MarvelAPIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE232124D3B40006AFC7 /* MarvelAPIClientTest.swift */; };
 		DBC0EE2A2124E3A30006AFC7 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = DBC0EE252124DE320006AFC7 /* characters.json */; };
+		DBD32FB12125B452009C5F89 /* MockMarvelAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD32FB02125B452009C5F89 /* MockMarvelAPIClient.swift */; };
 		DBD9A37F2123A6FE00791154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A37E2123A6FE00791154 /* AppDelegate.swift */; };
 		DBD9A3812123A6FE00791154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9A3802123A6FE00791154 /* ViewController.swift */; };
 		DBD9A3842123A6FE00791154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD9A3822123A6FE00791154 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceAPITest.swift; sourceTree = "<group>"; };
 		DBC0EE232124D3B40006AFC7 /* MarvelAPIClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClientTest.swift; sourceTree = "<group>"; };
 		DBC0EE252124DE320006AFC7 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
+		DBD32FB02125B452009C5F89 /* MockMarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMarvelAPIClient.swift; sourceTree = "<group>"; };
 		DBD9A37B2123A6FE00791154 /* Marvel Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD9A37E2123A6FE00791154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD9A3802123A6FE00791154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +114,8 @@
 		DBC0EE1F2124C6040006AFC7 /* ServiceAPI */ = {
 			isa = PBXGroup;
 			children = (
-				DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */,
-				DBC0EE232124D3B40006AFC7 /* MarvelAPIClientTest.swift */,
+				DBD32FB22125B459009C5F89 /* Specs */,
+				DBD32FB32125B460009C5F89 /* Mocks */,
 				DBC0EE202124C67D0006AFC7 /* Marvel CharactersTests-Bridging-Header.h */,
 			);
 			path = ServiceAPI;
@@ -135,6 +137,23 @@
 				DBC0EE252124DE320006AFC7 /* characters.json */,
 			);
 			path = SampleData;
+			sourceTree = "<group>";
+		};
+		DBD32FB22125B459009C5F89 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */,
+				DBC0EE232124D3B40006AFC7 /* MarvelAPIClientTest.swift */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		DBD32FB32125B460009C5F89 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DBD32FB02125B452009C5F89 /* MockMarvelAPIClient.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		DBD9A3722123A6FE00791154 = {
@@ -396,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC0EE242124D3B40006AFC7 /* MarvelAPIClientTest.swift in Sources */,
+				DBD32FB12125B452009C5F89 /* MockMarvelAPIClient.swift in Sources */,
 				DBC0EE222124C67D0006AFC7 /* MarvelServiceAPITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
