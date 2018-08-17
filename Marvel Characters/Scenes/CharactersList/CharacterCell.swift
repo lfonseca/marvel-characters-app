@@ -15,8 +15,12 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterNameLabel: UILabel!
     
     override func prepareForReuse() {
-        characterImageView.image = nil
+        characterImageView.image = UIImage(named: "character-placeholder")
         characterNameLabel.text = nil
+    }
+    
+    func populate(with character: CharacterViewData) {
+        characterNameLabel.text = character.name
     }
 
 }
