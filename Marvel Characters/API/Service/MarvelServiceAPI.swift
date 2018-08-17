@@ -15,12 +15,15 @@ enum MarvelServiceAPI {
 extension MarvelServiceAPI: TargetType {
     
     var baseURL: URL { return URL(string: "https://gateway.marvel.com")! }
+    
     var path: String {
         return "/v1/public/characters"
     }
+    
     var method: Method {
         return .get
     }
+    
     var task: Task {
         var parameters: [String: Any] = [
             "apikey": MarvelAPIParam.value(for: APIKey.self),
@@ -33,20 +36,14 @@ extension MarvelServiceAPI: TargetType {
         }
         return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
     }
+    
     var headers: [String : String]? {
         return ["Content-type": "application/json"]
     }
-    var sampleData: Data {
-        return sampleData(from: "characters")
-    }
     
-    fileprivate func sampleData(from filename: String) -> Data {
-        guard let path = Bundle.main.path(forResource: filename, ofType: "json") else { return Data() }
-        do {
-            return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-        } catch {
-            return Data()
-        }
+    var sampleData: Data {
+        let sampleDataProvider = MarvelSampleDataProvider()
+        return sampleDataProvider.provideSampleData(for: "characters")
     }
     
 }

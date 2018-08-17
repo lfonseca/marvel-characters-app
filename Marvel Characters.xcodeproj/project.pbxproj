@@ -16,6 +16,7 @@
 		DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */; };
 		DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */; };
 		DB75FD692124988800AD7B24 /* MarvelAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */; };
+		DB76668E2127099200F7D79F /* MarvelSampleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76668D2127099200F7D79F /* MarvelSampleDataProvider.swift */; };
 		DBC0EE1A2124AC2E0006AFC7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE192124AC2E0006AFC7 /* Character.swift */; };
 		DBC0EE222124C67D0006AFC7 /* MarvelServiceAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */; };
 		DBC0EE242124D3B40006AFC7 /* MarvelAPIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0EE232124D3B40006AFC7 /* MarvelAPIClientTest.swift */; };
@@ -58,6 +59,7 @@
 		DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPIClient.swift; sourceTree = "<group>"; };
 		DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClient.swift; sourceTree = "<group>"; };
 		DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIParams.swift; sourceTree = "<group>"; };
+		DB76668D2127099200F7D79F /* MarvelSampleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelSampleDataProvider.swift; sourceTree = "<group>"; };
 		DBC0EE192124AC2E0006AFC7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		DBC0EE202124C67D0006AFC7 /* Marvel CharactersTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marvel CharactersTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBC0EE212124C67D0006AFC7 /* MarvelServiceAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceAPITest.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */,
 				DB75FD682124988800AD7B24 /* MarvelAPIParams.swift */,
+				DB76668D2127099200F7D79F /* MarvelSampleDataProvider.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB76668E2127099200F7D79F /* MarvelSampleDataProvider.swift in Sources */,
 				DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */,
 				DBD32FC721264748009C5F89 /* CharacterViewData.swift in Sources */,
 				DB75FD632124657800AD7B24 /* MarvelServiceAPI.swift in Sources */,
