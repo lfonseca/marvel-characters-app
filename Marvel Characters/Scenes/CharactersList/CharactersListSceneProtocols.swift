@@ -16,7 +16,7 @@ enum CharactersListState {
 }
 
 protocol CharactersListSceneCreation {
-    static func create() -> UIViewController
+    static func create(from coordinator: CharactersFlowCoordinator) -> UIViewController
 }
 
 protocol CharactersListView: class {
@@ -26,7 +26,9 @@ protocol CharactersListView: class {
 
 protocol CharactersListBusinessLogic {
     var view: CharactersListView? {get}
+    var coordinator: CharactersFlowCoordinator {get}
     var numberOfCharacters: Int {get}
     func loadCharacters()
     func character(for row: Int) -> CharacterViewData
+    func didSelectCharacter(at row: Int)
 }

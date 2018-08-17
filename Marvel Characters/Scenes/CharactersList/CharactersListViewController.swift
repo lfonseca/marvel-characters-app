@@ -85,6 +85,10 @@ extension CharactersListViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.didSelectCharacter(at: indexPath.row)
+    }
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let viewModel = viewModel else { return }
         if indexPath.row == viewModel.numberOfCharacters - 2 {

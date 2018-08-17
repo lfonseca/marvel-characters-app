@@ -17,8 +17,6 @@ protocol Character {
     var comics: [String] {get set}
     var series: [String] {get set}
     var stories: [String] {get set}
-    
-    init(from json: JSON)
 }
 
 struct MarvelCharacter: Character {

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fX-09-5ae">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fX-09-5ae">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,10 +92,54 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5dU-J2-ZgB"/>
+                    <connections>
+                        <segue destination="LOf-Mq-0Po" kind="show" identifier="CharacterDetailsViewController" id="JP5-cG-VSX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtN-JM-8OE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="888.79999999999995" y="49.925037481259373"/>
+        </scene>
+        <!--Character Details View Controller-->
+        <scene sceneID="d1l-Rv-MQ3">
+            <objects>
+                <viewController storyboardIdentifier="CharacterDetailsViewController" id="LOf-Mq-0Po" customClass="CharacterDetailsViewController" customModule="Marvel_Characters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ckm-GN-uhj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="AqV-NT-J9B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="I35-E2-gTb"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ku9-YM-Ndx">
+                                <rect key="frame" x="0.0" y="267" width="375" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AqV-NT-J9B" firstAttribute="trailing" secondItem="ehC-HJ-ruZ" secondAttribute="trailing" id="0rP-tB-a2b"/>
+                            <constraint firstItem="ehC-HJ-ruZ" firstAttribute="bottom" secondItem="ku9-YM-Ndx" secondAttribute="bottom" id="2cb-f8-J0I"/>
+                            <constraint firstItem="ku9-YM-Ndx" firstAttribute="top" secondItem="AqV-NT-J9B" secondAttribute="bottom" id="GS2-VD-78d"/>
+                            <constraint firstItem="ku9-YM-Ndx" firstAttribute="leading" secondItem="ehC-HJ-ruZ" secondAttribute="leading" id="SPA-m4-Evp"/>
+                            <constraint firstItem="AqV-NT-J9B" firstAttribute="top" secondItem="ehC-HJ-ruZ" secondAttribute="top" id="XBW-nJ-Owz"/>
+                            <constraint firstItem="AqV-NT-J9B" firstAttribute="leading" secondItem="ehC-HJ-ruZ" secondAttribute="leading" id="jj3-Jm-0jJ"/>
+                            <constraint firstItem="ehC-HJ-ruZ" firstAttribute="trailing" secondItem="ku9-YM-Ndx" secondAttribute="trailing" id="qPy-sx-776"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ehC-HJ-ruZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="characterDetailsTableView" destination="ku9-YM-Ndx" id="7vn-0T-Vrq"/>
+                        <outlet property="characterImageView" destination="AqV-NT-J9B" id="GDZ-1H-wxV"/>
+                        <outlet property="characterImageViewHeightConstraint" destination="I35-E2-gTb" id="AjN-WL-K72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSX-qK-iWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616.8" y="49.925037481259373"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="95g-qp-TGa">
