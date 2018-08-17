@@ -15,14 +15,20 @@ class CharactersListViewModelTest: QuickSpec {
     
     override func spec() {
         describe("Characters list view model") {
+            var view: MockCharactersListView!
+            var coordinator: MockCharactersFlowCoordinator!
+            var service: CharactersAPIClient!
+            var viewModel: CharactersListViewModel!
+            
+            beforeEach {
+                view = MockCharactersListView()
+                coordinator = MockCharactersFlowCoordinator()
+            }
+            
             describe("with successful service") {
-                var view: MockCharactersListView!
-                var service: CharactersAPIClient!
-                var viewModel: CharactersListViewModel!
                 beforeEach {
-                    view = MockCharactersListView()
                     service = MockMarvelAPIClient.forSuccess()
-                    viewModel = CharactersListViewModel(view: view, service: service)
+                    viewModel = CharactersListViewModel(view: view, coordinator: coordinator, service: service)
                 }
                 it("set view loading while fetching") {
                     viewModel.loadCharacters()
@@ -41,15 +47,17 @@ class CharactersListViewModelTest: QuickSpec {
                     viewModel.loadCharacters()
                     expect(viewModel.character(for: 0).name).to(equal("3-D Man"))
                 }
+                it("ask coordinator for navigation") {
+                    viewModel.loadCharacters()
+                    viewModel.didSelectCharacter(at: 0)
+                    expect(coordinator.didCallShowDetails).to(beTrue())
+                    expect(coordinator.characterReceived?.name).to(equal("3-D Man"))
+                }
             }
             describe("with failed service") {
-                var view: MockCharactersListView!
-                var service: CharactersAPIClient!
-                var viewModel: CharactersListViewModel!
                 beforeEach {
-                    view = MockCharactersListView()
                     service = MockMarvelAPIClient.forFailure(with: NSError())
-                    viewModel = CharactersListViewModel(view: view, service: service)
+                    viewModel = CharactersListViewModel(view: view, coordinator: coordinator, service: service)
                 }
                 it("tell view about failure") {
                     viewModel.loadCharacters()

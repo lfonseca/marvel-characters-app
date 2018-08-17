@@ -51,6 +51,12 @@ class CharactersListViewControllerTest: QuickSpec {
                     expect(numberOfCells).to(equal(mockViewModel.numberOfCharacters))
                     expect(firstCell.characterNameLabel.text).to(equal(mockViewModel.testCharacter.name))
                 }
+                it("pass selected row to viewModel") {
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    view.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+                    view.tableView.delegate?.tableView!(view.tableView, didSelectRowAt: indexPath)
+                    expect(mockViewModel.didCallSelectCharacter).to(beTrue())
+                }
             }
             
         }

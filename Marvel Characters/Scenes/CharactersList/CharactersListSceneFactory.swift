@@ -10,14 +10,14 @@ import UIKit
 
 struct CharactersListSceneFactory: CharactersListSceneCreation {
     
-    static func create() -> UIViewController {
+    static func create(from coordinator: CharactersFlowCoordinator) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard  let view = storyboard.instantiateViewController(withIdentifier: "CharactersListViewController") as? CharactersListViewController else {
             return UIViewController()
         }
         
         let apiService = MarvelAPIClient()
-        let viewModel = CharactersListViewModel(view: view, service: apiService)
+        let viewModel = CharactersListViewModel(view: view, coordinator: coordinator, service: apiService)
         view.viewModel = viewModel
         
         return view

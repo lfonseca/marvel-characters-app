@@ -11,8 +11,10 @@
 class MockCharactersListViewModel: CharactersListBusinessLogic {
     
     var view: CharactersListView?
+    var coordinator: CharactersFlowCoordinator = MockCharactersFlowCoordinator()
     var numberOfCharacters: Int = 5
     var didCallLoadCharacters = false
+    var didCallSelectCharacter = false
     let testCharacter = TestCharacterViewData()
     
     func loadCharacters() {
@@ -21,6 +23,10 @@ class MockCharactersListViewModel: CharactersListBusinessLogic {
     
     func character(for row: Int) -> CharacterViewData {
         return testCharacter
+    }
+    
+    func didSelectCharacter(at row: Int) {
+        didCallSelectCharacter = true
     }
     
 }

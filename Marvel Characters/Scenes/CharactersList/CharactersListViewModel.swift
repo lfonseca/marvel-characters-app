@@ -11,6 +11,7 @@ import Foundation
 class CharactersListViewModel: CharactersListBusinessLogic {
     
     weak var view: CharactersListView?
+    let coordinator: CharactersFlowCoordinator
     
     fileprivate let apiService: CharactersAPIClient
     fileprivate var characters: [Character]
@@ -20,9 +21,10 @@ class CharactersListViewModel: CharactersListBusinessLogic {
         return characters.count
     }
     
-    init(view: CharactersListView?, service: CharactersAPIClient) {
+    init(view: CharactersListView?, coordinator: CharactersFlowCoordinator, service: CharactersAPIClient) {
         self.view = view
         self.apiService = service
+        self.coordinator = coordinator
         characters = []
         currentOffset = 0
     }
@@ -44,6 +46,11 @@ class CharactersListViewModel: CharactersListBusinessLogic {
     func character(for row: Int) -> CharacterViewData {
         let character = characters[row]
         return MarvelCharacterViewData(from: character)
+    }
+    
+    func didSelectCharacter(at row: Int) {
+        let character = characters[row]
+        coordinator.showDetails(from: character)
     }
     
 }
