@@ -17,8 +17,8 @@ struct MarvelAPIClient: CharactersAPIClient {
         self.provider = provider
     }
     
-    func getAllCharacters(on completion: @escaping (Result<[Character]>) -> Void) {
-        provider.request(.characters) { result in
+    func getAllCharacters(offset: Int, on completion: @escaping (Result<[Character]>) -> Void) {
+        provider.request(.characters(offset: offset)) { result in
             switch result {
             case .success(let response):
                 let json = JSON(response.data)

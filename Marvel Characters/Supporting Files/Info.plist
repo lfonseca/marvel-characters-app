@@ -20,6 +20,15 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MarvelAPIParams</key>
+	<dict>
+		<key>apikey</key>
+		<string>e98bb4b71cf92e9c17b4d151d58f95b7</string>
+		<key>hash</key>
+		<string>a59bdc94d89dcfd9eefe18ad4bd1a013</string>
+		<key>ts</key>
+		<string>1</string>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -28,11 +37,11 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,14 +50,30 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MarvelAPIParams</key>
+	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>apikey</key>
-		<string>e98bb4b71cf92e9c17b4d151d58f95b7</string>
-		<key>ts</key>
-		<string>1</string>
-		<key>hash</key>
-		<string>a59bdc94d89dcfd9eefe18ad4bd1a013</string>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>i.annihil.us</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<true/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.2</string>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<true/>
+				<key>NSThirdPartyExceptionMinimumTLSVersion</key>
+				<string>TLSv1.2</string>
+				<key>NSRequiresCertificateTransparency</key>
+				<false/>
+			</dict>
+		</dict>
 	</dict>
 </dict>
 </plist>

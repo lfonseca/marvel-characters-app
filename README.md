@@ -7,4 +7,4 @@ Aplicação teste que lista os personagens Marvel
 
 ## Dependências
 * [Xcode](https://developer.apple.com/xcode/) v9.3.1
-* [Xcode](https://cocoapods.org/) v1.5.2
+* [Cocoapods](https://cocoapods.org/) v1.5.2

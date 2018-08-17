@@ -9,5 +9,5 @@
 import Alamofire
 
 protocol CharactersAPIClient {
-    func getAllCharacters(on completion: @escaping (Result<[Character]>) -> Void)
+    func getAllCharacters(offset: Int, on completion: @escaping (Result<[Character]>) -> Void)
 }
