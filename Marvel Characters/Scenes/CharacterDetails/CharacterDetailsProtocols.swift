@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+protocol CharacterDetailsSceneCreation {
+    static func create(for character: Character) -> UIViewController
+}
 
 protocol CharacterDetailsBusinessLogic {
     var title: String {get}
@@ -14,5 +19,5 @@ protocol CharacterDetailsBusinessLogic {
     var numberOfSections: Int {get}
     func numberOfRows(for section: Int) -> Int
     func title(for section: Int) -> String
-    func info(for row: Int) -> String
+    func info(for section: Int, at row: Int) -> String
 }

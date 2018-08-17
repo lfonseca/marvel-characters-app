@@ -28,6 +28,7 @@ class CharacterDetailsViewControllerTest: QuickSpec {
                 beforeEach {
                     view.viewModel = nil
                     view.loadViewIfNeeded()
+                    view.characterDetailsTableView.reloadData()
                 }
                 
                 it("shows empty table") {
@@ -40,6 +41,7 @@ class CharacterDetailsViewControllerTest: QuickSpec {
                 beforeEach {
                     view.viewModel = viewModel
                     view.loadViewIfNeeded()
+                    view.characterDetailsTableView.reloadData()
                 }
                 
                 it("gets its title from viewModel") {
@@ -53,6 +55,11 @@ class CharacterDetailsViewControllerTest: QuickSpec {
                     let section = 0
                     let numberOfRows = view.characterDetailsTableView.numberOfRows(inSection: section)
                     expect(numberOfRows).to(equal(viewModel.numberOfRows(for: section)))
+                }
+                it("gets cell content from viewModel") {
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    let cell = view.characterDetailsTableView.cellForRow(at: indexPath)
+                    expect(cell?.textLabel?.text).to(equal(viewModel.info(for: indexPath.section, at: indexPath.row)))
                 }
             }
             

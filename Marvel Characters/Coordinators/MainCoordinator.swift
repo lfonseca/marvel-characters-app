@@ -22,9 +22,8 @@ class MainCoordinator: Coordinator, CharactersFlowCoordinator {
     }
     
     func showDetails(from character: Character) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let view = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController")
-        navigationController.pushViewController(view, animated: true)
+        let detailsView = CharacterDetailsSceneFactory.create(for: character)
+        navigationController.pushViewController(detailsView, animated: true)
     }
     
 }

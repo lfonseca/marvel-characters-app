@@ -14,8 +14,8 @@ struct TestCharacter: Marvel_Characters.Character {
     var id: String = "Some id"
     var name: String = "Test Hero"
     var description: String = "The description goes here"
-    var thumbnailURL: URL?
-    var comics: [String] = []
-    var series: [String] = []
-    var stories: [String] = []
+    var thumbnailURL: URL? = URL(string:  "http://someurl.com")
+    var comics: [String] = ["Some Comic"]
+    var series: [String] = ["Some Series"]
+    var stories: [String] = ["Some Story"]
 }

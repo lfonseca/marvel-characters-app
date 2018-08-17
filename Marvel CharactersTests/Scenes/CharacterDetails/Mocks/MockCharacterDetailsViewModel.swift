@@ -22,7 +22,7 @@ class MockCharacterDetailsViewModel: CharacterDetailsBusinessLogic {
         return "Section Title"
     }
     
-    func info(for row: Int) -> String {
+    func info(for section: Int, at row: Int) -> String {
         return "Row Info"
     }
     
