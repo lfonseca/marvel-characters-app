@@ -11,8 +11,10 @@ import Foundation
 class CharactersListViewModel: CharactersListBusinessLogic {
     
     weak var view: CharactersListView?
-    fileprivate var characters: [Character]
+    
     fileprivate let apiService: CharactersAPIClient
+    fileprivate var characters: [Character]
+    fileprivate var currentOffset: Int
     
     var numberOfCharacters: Int {
         return characters.count
@@ -22,13 +24,16 @@ class CharactersListViewModel: CharactersListBusinessLogic {
         self.view = view
         self.apiService = service
         characters = []
+        currentOffset = 0
     }
     
     func loadCharacters() {
-        apiService.getAllCharacters { result in
+        view?.updateView(for: .loading)
+        apiService.getAllCharacters(offset: currentOffset) { [unowned self] result in
             switch result {
             case .success(let characters):
-                self.characters = characters
+                self.characters.append(contentsOf: characters)
+                self.currentOffset += 20
                 self.view?.updateView(for: .dataUpdated)
             case .failure(let error):
                 print(error)

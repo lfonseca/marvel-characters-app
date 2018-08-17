@@ -7,12 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 enum CharactersListState {
     case loading
     case dataUpdated
-    case loadingMoreData
     case failure
+}
+
+protocol CharactersListSceneCreation {
+    static func create() -> UIViewController
 }
 
 protocol CharactersListView: class {

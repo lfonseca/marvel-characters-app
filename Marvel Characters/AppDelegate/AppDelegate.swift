@@ -15,16 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if  let charactersListViewController = storyboard.instantiateViewController(withIdentifier: "CharactersListViewController") as? CharactersListViewController {
-            let charactersAPIService = MarvelAPIClient()
-            let charactersListViewModel = CharactersListViewModel(view: charactersListViewController, service: charactersAPIService)
-            charactersListViewController.viewModel = charactersListViewModel
-            let navigationController = UINavigationController(rootViewController: charactersListViewController)
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = navigationController
-            self.window?.makeKeyAndVisible()
-        }
+        let charactersListViewController = CharactersListSceneFactory.create()
+        let navigationController = UINavigationController(rootViewController: charactersListViewController)
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

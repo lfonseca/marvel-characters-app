@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CharacterCell: UITableViewCell {
     static let reuseIdentifier: String = "CharacterCell"
@@ -14,13 +15,16 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     
+    fileprivate let placeholderImage = UIImage(named: "character-placeholder")
+    
     override func prepareForReuse() {
-        characterImageView.image = UIImage(named: "character-placeholder")
+        characterImageView.image = placeholderImage
         characterNameLabel.text = nil
     }
     
     func populate(with character: CharacterViewData) {
         characterNameLabel.text = character.name
+        characterImageView.kf.setImage(with: character.thumbnailURL, placeholder: placeholderImage)
     }
 
 }

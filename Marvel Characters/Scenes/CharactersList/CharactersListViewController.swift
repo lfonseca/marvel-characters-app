@@ -11,16 +11,20 @@ import UIKit
 class CharactersListViewController: UITableViewController {
     
     var viewModel: CharactersListBusinessLogic?
+    fileprivate var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
         viewModel?.loadCharacters()
+        setup()
     }
     
     fileprivate func setup() {
         title = "Personagens"
         clearsSelectionOnViewWillAppear = false
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 60)
+        tableView.tableFooterView = activityIndicator
+        tableView.backgroundColor = .lightGray
     }
     
 }
@@ -29,7 +33,10 @@ extension CharactersListViewController: CharactersListView {
     
     func updateView(for state: CharactersListState) {
         switch state {
+        case .loading:
+            activityIndicator.startAnimating()
         case .dataUpdated:
+            activityIndicator.stopAnimating()
             tableView.reloadData()
         default:
             break
@@ -65,6 +72,13 @@ extension CharactersListViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        if indexPath.row == viewModel.numberOfCharacters - 2 {
+            viewModel.loadCharacters()
+        }
     }
 
 }

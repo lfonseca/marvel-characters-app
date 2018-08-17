@@ -19,7 +19,7 @@ class MarvelAPIClientTest: QuickSpec {
             describe("fetch characters") {
                 it("succeeds") {
                     let apiClient = MockMarvelAPIClient.forSuccess()
-                    apiClient.getAllCharacters { result in
+                    apiClient.getAllCharacters(offset: 0) { result in
                         if case .success(let characters) = result {
                             expect(characters[0].name).to(equal("3-D Man"))
                         }
@@ -28,7 +28,7 @@ class MarvelAPIClientTest: QuickSpec {
                 it("fails") {
                     let expectedError = NSError(domain: "Tests", code: 500, userInfo: nil)
                     let apiClient = MockMarvelAPIClient.forFailure(with: expectedError)
-                    apiClient.getAllCharacters { result in
+                    apiClient.getAllCharacters(offset: 0) { result in
                         if case .failure(let error) = result {
                             expect(error.localizedDescription).to(equal(expectedError.localizedDescription))
                         }

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - Kingfisher (4.8.0)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Kingfisher (~> 4.0)
   - Moya (~> 11.0)
   - Nimble
   - Quick
@@ -20,6 +22,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Kingfisher
     - Moya
     - Nimble
     - Quick
@@ -28,12 +31,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: d06537f403b0a407c5812be5dd0d894ec698af85
+PODFILE CHECKSUM: 487f9e5013c98c7af866238307da0edcdb406962
 
 COCOAPODS: 1.5.2

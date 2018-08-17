@@ -19,7 +19,7 @@ class MarvelServiceAPITest: QuickSpec {
         describe("Marvel service API") {
             var endpoint: MarvelServiceAPI!
             describe("characters endpoint") {
-                endpoint = .characters
+                endpoint = .characters(offset: 0)
                 it("should initialize correctly") {
                     expect(endpoint.baseURL.absoluteString).to(equal("https://gateway.marvel.com"))
                     expect(endpoint.path).to(equal("/v1/public/characters"))

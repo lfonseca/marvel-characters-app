@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A04F1930F48E41DEAA9E3DE /* Pods_Marvel_Characters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8501DCCA0CE363BAE4C70C80 /* Pods_Marvel_Characters.framework */; };
 		43758723ABCE1A23BB7C6B15 /* Pods_Marvel_CharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC8BCE9CEB7921D03F3A3C6 /* Pods_Marvel_CharactersTests.framework */; };
+		DB4DB8F621265832002E6D30 /* CharactersListSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4DB8F521265832002E6D30 /* CharactersListSceneFactory.swift */; };
 		DB75FD632124657800AD7B24 /* MarvelServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */; };
 		DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */; };
 		DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */; };
@@ -48,6 +49,7 @@
 		99BD69A421A65639C2CF3DBC /* Pods-Marvel Characters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Characters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters.debug.xcconfig"; sourceTree = "<group>"; };
 		B7B9DD4516D4655593233C33 /* Pods-Marvel Characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters.release.xcconfig"; sourceTree = "<group>"; };
 		D05D506EA87BEE0F193C9054 /* Pods-Marvel CharactersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel CharactersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel CharactersTests/Pods-Marvel CharactersTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB4DB8F521265832002E6D30 /* CharactersListSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListSceneFactory.swift; sourceTree = "<group>"; };
 		DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceAPI.swift; sourceTree = "<group>"; };
 		DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPIClient.swift; sourceTree = "<group>"; };
 		DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClient.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				DBD32FC221264212009C5F89 /* CharactersListViewModel.swift */,
 				DBD32FBA2125C2E2009C5F89 /* CharacterCell.swift */,
 				DBD32FC621264748009C5F89 /* CharacterViewData.swift */,
+				DB4DB8F521265832002E6D30 /* CharactersListSceneFactory.swift */,
 			);
 			path = CharactersList;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -412,6 +416,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -472,6 +477,7 @@
 				DBC0EE1A2124AC2E0006AFC7 /* Character.swift in Sources */,
 				DBD32FBB2125C2E2009C5F89 /* CharacterCell.swift in Sources */,
 				DBD32FC321264212009C5F89 /* CharactersListViewModel.swift in Sources */,
+				DB4DB8F621265832002E6D30 /* CharactersListSceneFactory.swift in Sources */,
 				DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */,
 				DBD32FB72125C216009C5F89 /* CharactersListViewController.swift in Sources */,
 				DBD9A37F2123A6FE00791154 /* AppDelegate.swift in Sources */,
