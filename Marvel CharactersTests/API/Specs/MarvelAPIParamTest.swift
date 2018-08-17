@@ -15,15 +15,15 @@ class MarvelAPIParamTest: QuickSpec {
     
     override func spec() {
         describe("Marvel API params") {
-            it("should have an API key") {
+            it("has an API key") {
                 let apiKey = MarvelAPIParam.value(for: APIKey.self, in: MockMarvelAPIParams.dictionary)
                 expect(apiKey).to(equal(MockMarvelAPIParams.apiKeyValue))
             }
-            it("should have a timestamp") {
+            it("has a timestamp") {
                 let timestamp = MarvelAPIParam.value(for: Timestamp.self, in: MockMarvelAPIParams.dictionary)
                 expect(timestamp).to(equal(MockMarvelAPIParams.timestampValue))
             }
-            it("should have a hash") {
+            it("has a hash") {
                 let hash = MarvelAPIParam.value(for: Hash.self, in: MockMarvelAPIParams.dictionary)
                 expect(hash).to(equal(MockMarvelAPIParams.hashValue))
             }

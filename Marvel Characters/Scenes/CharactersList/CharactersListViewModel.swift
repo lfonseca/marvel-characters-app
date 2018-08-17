@@ -35,8 +35,8 @@ class CharactersListViewModel: CharactersListBusinessLogic {
                 self.characters.append(contentsOf: characters)
                 self.currentOffset += 20
                 self.view?.updateView(for: .dataUpdated)
-            case .failure(let error):
-                print(error)
+            case .failure:
+                self.view?.updateView(for: .failure)
             }
         }
     }

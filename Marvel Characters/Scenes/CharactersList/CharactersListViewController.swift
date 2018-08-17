@@ -38,9 +38,20 @@ extension CharactersListViewController: CharactersListView {
         case .dataUpdated:
             activityIndicator.stopAnimating()
             tableView.reloadData()
-        default:
-            break
+        case .failure:
+            activityIndicator.stopAnimating()
+            showAlertView(with: "Erro!", message: "Ocorreu um erro na sua requisição")
         }
+    }
+    
+    fileprivate func showAlertView(with title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true, completion: nil)
     }
     
 }

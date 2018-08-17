@@ -10,6 +10,8 @@
 		3A04F1930F48E41DEAA9E3DE /* Pods_Marvel_Characters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8501DCCA0CE363BAE4C70C80 /* Pods_Marvel_Characters.framework */; };
 		43758723ABCE1A23BB7C6B15 /* Pods_Marvel_CharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC8BCE9CEB7921D03F3A3C6 /* Pods_Marvel_CharactersTests.framework */; };
 		DB4DB8F621265832002E6D30 /* CharactersListSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4DB8F521265832002E6D30 /* CharactersListSceneFactory.swift */; };
+		DB4DB8F821266D5D002E6D30 /* CharactersListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4DB8F721266D5D002E6D30 /* CharactersListViewModelTest.swift */; };
+		DB4DB8FE212675CA002E6D30 /* MockCharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4DB8FD212675CA002E6D30 /* MockCharactersListView.swift */; };
 		DB75FD632124657800AD7B24 /* MarvelServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */; };
 		DB75FD6521246B4A00AD7B24 /* CharactersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */; };
 		DB75FD672124706A00AD7B24 /* MarvelAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */; };
@@ -50,6 +52,8 @@
 		B7B9DD4516D4655593233C33 /* Pods-Marvel Characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel Characters/Pods-Marvel Characters.release.xcconfig"; sourceTree = "<group>"; };
 		D05D506EA87BEE0F193C9054 /* Pods-Marvel CharactersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel CharactersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel CharactersTests/Pods-Marvel CharactersTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB4DB8F521265832002E6D30 /* CharactersListSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListSceneFactory.swift; sourceTree = "<group>"; };
+		DB4DB8F721266D5D002E6D30 /* CharactersListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModelTest.swift; sourceTree = "<group>"; };
+		DB4DB8FD212675CA002E6D30 /* MockCharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharactersListView.swift; sourceTree = "<group>"; };
 		DB75FD622124657800AD7B24 /* MarvelServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceAPI.swift; sourceTree = "<group>"; };
 		DB75FD6421246B4A00AD7B24 /* CharactersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAPIClient.swift; sourceTree = "<group>"; };
 		DB75FD662124706A00AD7B24 /* MarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClient.swift; sourceTree = "<group>"; };
@@ -104,6 +108,39 @@
 				7AC8BCE9CEB7921D03F3A3C6 /* Pods_Marvel_CharactersTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB4DB8F921266D64002E6D30 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DB8FA21266D70002E6D30 /* CharactersList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DB4DB8FA21266D70002E6D30 /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DB8FB212675A5002E6D30 /* Specs */,
+				DB4DB8FC212675B3002E6D30 /* Mocks */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		DB4DB8FB212675A5002E6D30 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DB8F721266D5D002E6D30 /* CharactersListViewModelTest.swift */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		DB4DB8FC212675B3002E6D30 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DB8FD212675CA002E6D30 /* MockCharactersListView.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		DB75FD612124651B00AD7B24 /* API */ = {
@@ -263,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC0EE1F2124C6040006AFC7 /* API */,
+				DB4DB8F921266D64002E6D30 /* Scenes */,
 				DBD9A3952123A70000791154 /* Info.plist */,
 			);
 			path = "Marvel CharactersTests";
@@ -492,9 +530,11 @@
 			files = (
 				DBD32FBF2125ECA6009C5F89 /* MockMarvelAPIParamsDictionary.swift in Sources */,
 				DBC0EE242124D3B40006AFC7 /* MarvelAPIClientTest.swift in Sources */,
+				DB4DB8F821266D5D002E6D30 /* CharactersListViewModelTest.swift in Sources */,
 				DBD32FBD2125EC24009C5F89 /* MarvelAPIParamTest.swift in Sources */,
 				DBD32FB12125B452009C5F89 /* MockMarvelAPIClient.swift in Sources */,
 				DBC0EE222124C67D0006AFC7 /* MarvelServiceAPITest.swift in Sources */,
+				DB4DB8FE212675CA002E6D30 /* MockCharactersListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
