@@ -43,7 +43,7 @@ class CharactersListViewModel: CharactersListBusinessLogic {
     
     func character(for row: Int) -> CharacterViewData {
         let character = characters[row]
-        return CharacterViewData(from: character)
+        return MarvelCharacterViewData(from: character)
     }
     
 }

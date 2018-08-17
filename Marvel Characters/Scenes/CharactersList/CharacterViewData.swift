@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct CharacterViewData {
+protocol CharacterViewData {
+    var name: String {get set}
+    var thumbnailURL: URL? {get set}
+}
+
+struct MarvelCharacterViewData: CharacterViewData {
     var name: String
     var thumbnailURL: URL?
     
