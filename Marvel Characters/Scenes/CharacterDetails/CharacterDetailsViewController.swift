@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CharacterDetailsViewController: UIViewController {
 
     @IBOutlet weak var characterImageView: UIImageView!
-    @IBOutlet weak var characterImageViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var characterDetailsTableView: UITableView!
+    
+    var viewModel: CharacterDetailsBusinessLogic?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = viewModel?.title
+        characterImageView.kf.setImage(with: viewModel?.imageURL)
         characterDetailsTableView.dataSource = self
     }
 
@@ -24,11 +28,11 @@ class CharacterDetailsViewController: UIViewController {
 extension CharacterDetailsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel?.numberOfSections ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel?.numberOfRows(for: section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

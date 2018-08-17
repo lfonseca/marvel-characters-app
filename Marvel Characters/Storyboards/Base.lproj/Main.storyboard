@@ -134,7 +134,6 @@
                     <connections>
                         <outlet property="characterDetailsTableView" destination="ku9-YM-Ndx" id="7vn-0T-Vrq"/>
                         <outlet property="characterImageView" destination="AqV-NT-J9B" id="GDZ-1H-wxV"/>
-                        <outlet property="characterImageViewHeightConstraint" destination="I35-E2-gTb" id="AjN-WL-K72"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSX-qK-iWr" userLabel="First Responder" sceneMemberID="firstResponder"/>

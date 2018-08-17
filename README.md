@@ -8,3 +8,17 @@ Aplicação teste que lista os personagens Marvel
 ## Dependências
 * [Xcode](https://developer.apple.com/xcode/) v9.3.1
 * [Cocoapods](https://cocoapods.org/) v1.5.2
+
+## Instalação
+
+**1:** Clone esse repositório:
+`git clone https://github.com/lfonseca/marvel-characters-app.git`
+
+**2:** Navegue até o repositório clonado:
+`cd marvel-characters-app`
+
+**3:** Instale as dependências com `pod install`
+
+**4:** Abra o arquivo `Marvel Characters.xcworkspace`
+
+**5:** Pressione &#8984; + R para rodar o projeto
